@@ -37,8 +37,8 @@ const securityHeaders = [
 const nextConfig = {
   output: isExport ? 'export' : 'standalone',
   // GitHub Pages serves from /careerARTH — only needed for static export
-  basePath: isExport ? '/careerarth' : '',
-  assetPrefix: isExport ? '/careerarth' : '',
+  basePath: isExport ? '/careerARTH' : '',
+  assetPrefix: isExport ? '/careerARTH' : '',
   poweredByHeader: false,
   images: {
     // next/image optimisation requires a server; disable for static export
