@@ -1,10 +1,22 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 
-export function PrimaryCtaLink({ href, children }: { href: string; children: ReactNode }) {
+export function PrimaryCtaLink({
+  href,
+  children,
+  target,
+  rel,
+}: {
+  href: string;
+  children: ReactNode;
+  target?: string;
+  rel?: string;
+}) {
   return (
     <Link
       href={href}
+      target={target}
+      rel={rel}
       className="inline-block px-8 py-4 bg-forest text-ivory text-sm font-medium rounded tracking-wide btn-primary w-full sm:w-auto text-center"
     >
       {children}

@@ -15,7 +15,7 @@ export function PageHero({
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold mb-4">{eyebrow}</p>
-          <h1 className="font-serif text-4xl lg:text-5xl text-forest mb-6 leading-tight">{title}</h1>
+          <h1 className="font-bold text-4xl lg:text-5xl text-forest mb-6 leading-tight tracking-tight">{title}</h1>
           <p className="text-slate max-w-2xl leading-relaxed">{description}</p>
         </Reveal>
       </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { footerLinks } from '@/lib/site-content';
 
 export function SiteFooter() {
@@ -7,9 +8,13 @@ export function SiteFooter() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-12 gap-8">
           <div className="text-center md:text-left">
-            <div className="font-serif font-semibold text-2xl tracking-tight text-forest mb-2">
-              Career<span className="italic text-gold">Arth</span>.
-            </div>
+            <Image
+              src="/logofooter-trimmed.png"
+              alt="CareerArth"
+              width={409}
+              height={469}
+              className="h-10 w-auto object-contain mb-2"
+            />
             <p className="text-sm text-slate">A diagnostic platform for professional strategy.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-slate">

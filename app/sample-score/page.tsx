@@ -17,15 +17,15 @@ export default function SampleScorePage() {
       />
 
       <Reveal className="bg-white rounded-2xl border border-sand shadow-sm overflow-hidden mb-12">
-        <div className="p-10 lg:p-16 flex flex-col items-center border-b border-sand bg-ivory/30">
+        <div className="p-10 lg:p-16 flex flex-col items-center border-b border-sand bg-ivory/80">
           <div className="relative flex flex-col items-center mb-4">
             <svg viewBox="0 0 100 50" className="w-64">
-              <path d="M 10 45 A 40 40 0 0 1 90 45" fill="none" stroke="#E6E1D6" strokeWidth="6" strokeLinecap="round" />
-              <path d="M 10 45 A 40 40 0 0 1 90 45" fill="none" stroke="#1E3329" strokeWidth="6" strokeLinecap="round" strokeDasharray="64 100" pathLength="100" />
+              <path d="M 10 45 A 40 40 0 0 1 90 45" fill="none" stroke="#3d4c50" strokeWidth="4" strokeLinecap="round" />
+              <path d="M 10 45 A 40 40 0 0 1 90 45" fill="none" stroke="#B59654" strokeWidth="4" strokeLinecap="round" strokeDasharray="64 100" pathLength="100" />
             </svg>
             <div className="absolute bottom-0 text-center translate-y-2">
-              <div className="font-serif text-7xl text-forest">64</div>
-              <div className="text-xs uppercase tracking-widest text-slate">Arth Score</div>
+              <div className="font-black text-7xl text-forest leading-none">64</div>
+              <div className="text-xs uppercase tracking-widest text-slate mt-1">Arth Score</div>
             </div>
           </div>
         </div>
@@ -37,9 +37,9 @@ export default function SampleScorePage() {
             ['Trajectory', '52%', 'w-[52%]', 'bg-slate', 'Momentum is leveling out; limited next-step growth.'],
             ['Human Capital', '81%', 'w-[81%]', 'bg-forest', 'Exceptional network leverage and transferability.'],
           ].map(([title, value, width, barColor, copy]) => (
-            <div key={title} className="bg-white p-8">
+            <div key={title} className="bg-[#FAFAF8] p-8 hover:bg-ivory/80 transition-colors">
               <div className="text-[10px] uppercase font-bold tracking-wider text-slate mb-1">{title}</div>
-              <div className="text-xl font-serif text-charcoal mb-4">{value}</div>
+              <div className="text-xl font-bold text-charcoal mb-4">{value}</div>
               <div className="w-full bg-sand h-1.5 rounded-full overflow-hidden mb-3">
                 <div className={`${barColor} h-full ${width}`} />
               </div>
@@ -50,7 +50,7 @@ export default function SampleScorePage() {
       </Reveal>
 
       <Reveal className="bg-parchment/40 rounded-xl p-8 lg:p-12 border border-sand mb-16 delay-100">
-        <h3 className="font-serif text-2xl text-forest mb-4">Strategic Interpretation</h3>
+        <h3 className="font-bold text-2xl text-forest mb-4 tracking-tight">Strategic Interpretation</h3>
         <p className="text-slate leading-relaxed">
           Based on typical profiles at this stage, a score of 64 suggests moderate trajectory risk. While your human
           capital remains high, there is an emerging misalignment between your current role&apos;s responsibilities and
@@ -60,9 +60,9 @@ export default function SampleScorePage() {
       </Reveal>
 
       <Reveal className="text-center space-y-8 delay-200">
-        <h4 className="font-serif text-3xl text-forest">Ready for your real diagnostic?</h4>
+        <h4 className="font-bold text-3xl text-forest tracking-tight">Ready for your real diagnostic?</h4>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <PrimaryCtaLink href="/audit">Start the Career Audit</PrimaryCtaLink>
+          <PrimaryCtaLink href="https://forms.gle/XujesuyJ23NeHufK6" target="_blank" rel="noopener noreferrer">Start the Career Audit</PrimaryCtaLink>
           <PrimaryCtaLink href="/consultation">Talk to a Career Expert</PrimaryCtaLink>
         </div>
       </Reveal>

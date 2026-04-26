@@ -9,17 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ivory: '#F9F8F4',
+        ivory: '#F7F3E8',
         parchment: '#F0ECE1',
         sand: '#E6E1D6',
         forest: '#1E3329',
         slate: '#2C3A35',
         charcoal: '#1A1C1B',
         gold: '#B59654',
+        graphite: '#2d3436',
+        pearl: '#f5f6fa',
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'serif'],
-        sans: ['"Inter"', 'sans-serif'],
+        sans: ['var(--font-work-sans)', 'sans-serif'],
+        'work-sans': ['var(--font-work-sans)', 'sans-serif'],
       },
       backgroundImage: {
         'grid-pattern':
