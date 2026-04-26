@@ -27,7 +27,7 @@ export function SiteHeader() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo-trimmed.png"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-trimmed.png`}
             alt="CareerArth"
             width={1924}
             height={468}

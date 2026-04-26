@@ -44,6 +44,10 @@ const nextConfig = {
     // next/image optimisation requires a server; disable for static export
     unoptimized: isExport,
   },
+  env: {
+    // Baked at build time so image components can prefix paths correctly
+    NEXT_PUBLIC_BASE_PATH: isExport ? '/careerARTH' : '',
+  },
   // Headers only work at runtime — skip for static export
   ...(isExport
     ? {}
