@@ -1,3 +1,5 @@
+const isExport = process.env.NEXT_OUTPUT === 'export';
+
 const securityHeaders = [
   {
     key: 'X-Content-Type-Options',
@@ -33,16 +35,32 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: isExport ? 'export' : 'standalone',
+  // GitHub Pages serves from /careerARTH — only needed for static export
+  basePath: isExport ? '/careerARTH' : '',
+  assetPrefix: isExport ? '/careerARTH' : '',
   poweredByHeader: false,
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: securityHeaders,
-      },
-    ];
+  images: {
+    // next/image optimisation requires a server; disable for static export
+    unoptimized: isExport,
   },
+  env: {
+    // Baked at build time so image components can prefix paths correctly
+    NEXT_PUBLIC_BASE_PATH: isExport ? '/careerARTH' : '',
+  },
+  // Headers only work at runtime — skip for static export
+  ...(isExport
+    ? {}
+    : {
+        async headers() {
+          return [
+            {
+              source: '/:path*',
+              headers: securityHeaders,
+            },
+          ];
+        },
+      }),
 };
 
 export default nextConfig;
